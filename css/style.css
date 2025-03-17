@@ -1,4 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* colors */
+
+:root {
+  --white-t: #fefefe;
+  --white-bg: #ffffff;
+  --blue-bg: #f1f8ff;
+  --gray-bg: #f6f6f6;
+  --gray-t: #4f4f4f;
+  --navbar-scroll: #355592;
+  --black: #000;
+  --orange: #ec9e1f;
+  --blue: #335498;
+  --blue-shadow: #8096bf;
+}
+
+/* utils */
 
 * {
   margin: 0;
@@ -8,92 +25,193 @@
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--white-bg);
-}
-
-ul {
+li {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
 }
+/* header */
+/* navigation bar */
 
-h1 {
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-img {
-  width: 100%;
-}
-
-.header {
+.bg-image {
   background-image: url(../img/hero-man.jpg);
+  width: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  color: var(--white-t);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .navbar {
   display: flex;
-  align-items: center; /* vertical center */
-  justify-content: space-between; /* horizontal align */
-  justify-self: center;
-  opacity: transparent;
-  transition: opacity 0.5s;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
-  top: 0;
   width: 100%;
-  height: 7rem;
-  padding: 0 30rem;
 }
 
-.navbar a {
-  padding: 1 rem 2 rem;
-  margin: 0 0.5rem;
+.logo img {
+  width: 20rem;
+  margin-left: 25rem;
 }
 
-.navbar a:hover {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40rem;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.menu li a {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white-t);
+}
+
+.menu li a:hover {
   background-color: var(--orange);
-  border-radius: 1rem;
+  color: var(--white-t);
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
   transition: ease-out 0.3s;
 }
 
-.navbar ul {
-  display: flex;
+.menu ul li button {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--white-t);
+  background-color: var(--orange);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
 }
 
-.navbar ul li {
-  margin: 0 1rem;
+.menu ul li button:hover {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: ease-out 0.3s;
 }
 
-.header .content {
+/* header text area */
+
+header .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
+  justify-content: baseline;
+  align-items: left;
+  height: 100vh;
   text-align: left;
-  padding: 0 30rem;
+  color: var(--white-t);
+  margin: 0 25rem;
 }
 
-.header .content h1 pre {
-  font-size: 6rem;
+header .content h1 {
+  font-size: 2rem;
   font-weight: 900;
+  margin-bottom: 1rem;
+  background-color: var(--blue);
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.4rem;
+  margin-top: 15rem;
+  text-shadow: var(--black) 0.2rem 0.2rem 0.2rem;
 }
 
-.header .content p {
-  font-size: 2.5rem;
+header .content .big-title {
+  font-size: 8rem;
+  font-weight: 900;
+  text-shadow: var(--black) 0.2rem 0.2rem 0.2rem;
+}
+
+header .content .header-info {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+}
+
+/* buttons */
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  padding: 1.1rem 2.1rem;
+  font-size: 2rem;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-blue {
+  background-color: var(--blue);
+  color: var(--white-t);
+  border-color: transparent;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-left: 2rem;
+}
+
+.btn-white {
+  background-color: transparent;
+  color: var(--white-t);
+  border: var(--white-t) 0.1rem solid;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-left: 5rem;
+}
+
+/* main */
+
+/* 4 box side by side */
+
+.bg-blue {
+  background-color: var(--blue-bg);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25rem;
+}
+
+.container div {
+  width: 24rem;
+  height: 13rem;
+  background-color: var(--white-bg);
+  margin: 3.8rem 0;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.container div p {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.container div .black-text {
+  margin-top: 2rem;
+  color: var(--black);
 }
