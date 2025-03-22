@@ -350,7 +350,7 @@ header .content .header-info {
 }
 
 .class-img img {
-  width: 35rem;
+  height: 35rem;
 }
 
 .times h3 {
@@ -424,4 +424,139 @@ header .content .header-info {
   border-right: 10px solid transparent;
   border-bottom: 15px solid var(--orange); /* Üçgenin rengi */
   transition: left 0.5s ease-in-out; /* Hareket animasyonu */
+}
+
+/* Trainers */
+
+.trainer-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25rem;
+}
+
+.polygon-frame {
+  position: absolute;
+  background-color: var(--blue);
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
+  width: 25rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: visible;
+}
+
+.mini-polygon {
+  position: relative;
+  background-color: var(--blue);
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.trainers-img:hover + .mini-polygon {
+  opacity: 1; /* Görünür yap */
+  visibility: visible; /* Görünür yap */
+  z-index: 3;
+}
+
+.trainers-img {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  width: 22rem;
+  height: 32rem;
+  border: 0.1rem solid var(--orange);
+  border-radius: 1rem;
+}
+
+.mini-polygon h4 {
+  color: var(--white-t);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.mini-polygon p {
+  color: var(--white-t);
+  font-weight: 500;
+  font-size: 1.2;
+}
+
+.container-purchase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25rem;
+  gap: 2rem;
+}
+
+.purchase-box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.purchase-box img {
+  width: 25rem;
+}
+.purchase-box h4 {
+  font-weight: 500;
+  font-size: x-large;
+  text-align: center;
+}
+
+.purchase-box p {
+  font-weight: 900;
+  font-size: medium;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+.add-to-cart:hover {
+  cursor: pointer;
 }
