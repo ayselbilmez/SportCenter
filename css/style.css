@@ -26,6 +26,7 @@
 html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -54,11 +55,25 @@ a {
   align-items: center;
   position: fixed;
   width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar.scrolled {
+  background-color: #355592;
 }
 
 .logo img {
   width: 20rem;
   margin-left: 25rem;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--white-t);
+  margin-right: 2rem;
 }
 
 .menu {
@@ -227,6 +242,7 @@ header .content .header-info {
   height: 100vh; /* Tam ekran yüksekliği */
   clip-path: polygon(39% 0, 100% 0%, 100% 100%, 52% 100%);
   position: absolute;
+  z-index: -1;
 }
 
 .classes {
@@ -433,7 +449,7 @@ header .content .header-info {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25rem;
+  margin: 10rem 25rem;
 }
 
 .polygon-frame {
@@ -518,11 +534,13 @@ header .content .header-info {
   font-size: 1.2;
 }
 
+/* PURCHASE */
+
 .container-purchase {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25rem;
+  margin: 5rem 25rem;
   gap: 2rem;
 }
 
@@ -559,4 +577,166 @@ header .content .header-info {
 
 .add-to-cart:hover {
   cursor: pointer;
+}
+
+.review-container {
+  display: flex; /* Elemanları yatayda hizalamak için */
+  flex-direction: row; /* Yatay düzen */
+  justify-content: space-between; /* Elemanlar arasında eşit boşluk bırak */
+  align-items: flex-start; /* Dikeyde hizalama */
+  gap: 2rem; /* Elemanlar arasında boşluk */
+  margin: 0 25rem; /* Kenarlardan boşluk */
+}
+
+.review {
+  width: 45%; /* Her bir review kutusunun genişliği */
+  padding: 2rem; /* İçerik etrafında boşluk */
+  border-radius: 0.5rem; /* Köşeleri yuvarlat */
+}
+
+.review .head {
+  display: flex; /* Başlık kısmını yatayda hizalamak için */
+  align-items: center; /* Dikeyde ortalamak için */
+  gap: 1rem; /* Resim ve başlık arasında boşluk */
+}
+
+.review .head img {
+  width: 5rem; /* Resmin genişliği */
+  height: 5rem; /* Resmin yüksekliği */
+  border-radius: 50%; /* Resmi yuvarlak yapmak için */
+}
+
+.review .client-title h4 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--black);
+  margin-left: 1rem;
+}
+
+.review-paragraph p {
+  background-color: var(--blue);
+  font-size: 1.4rem;
+  color: var(--white-t);
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.triangles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mini-triangle {
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  background-color: var(--blue-shadow);
+  width: 5rem;
+  height: 5rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25rem 2rem 25rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  color: var(--black);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  color: var(--black);
+}
+
+.form input {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin: 3rem 0 3rem -6rem;
+  background-color: var(--blue-bg);
+  border: none;
+  width: 35rem;
+  height: 3rem;
+}
+
+.form textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem -6rem;
+  background-color: var(--blue-bg);
+  border: none;
+  width: 35rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  background-color: var(--blue);
+}
+
+.site-info {
+  margin: 1rem 20rem 5rem 25rem;
+}
+
+.site-info p {
+  font-size: large;
+  font-weight: 500;
+  color: var(--white-t);
+  text-align: left;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+  margin: 0 25rem 5rem 40rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.links h4 {
+  font-size: xx-large;
+  color: var(--white-t);
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--white-t);
+  padding: 1rem;
+  font-size: large;
+}
+
+@media (max-width: 576px) {
 }

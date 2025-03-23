@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled"); // 50px aşağı kaydırınca navbar mavi olur
+    } else {
+      navbar.classList.remove("scrolled"); // En üste çıkınca tekrar şeffaf olur
+    }
+  });
+
   // Tab butonları ve içerikleri yönetme
   const buttons = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".class-content");
@@ -80,4 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Üçgenin pozisyonunu güncelle
     triangle.style.left = `${position}px`;
   }
+
+  const burgerMenu = document.querySelector(".burger-menu");
+  const menu = document.querySelector(".menu");
+
+  burgerMenu.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
 });
