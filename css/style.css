@@ -55,7 +55,6 @@ a {
   align-items: center;
   position: fixed;
   width: 100%;
-  position: fixed;
   z-index: 10;
 }
 
@@ -579,6 +578,8 @@ header .content .header-info {
   cursor: pointer;
 }
 
+/* Review  */
+
 .review-container {
   display: flex; /* Elemanları yatayda hizalamak için */
   flex-direction: row; /* Yatay düzen */
@@ -739,4 +740,211 @@ header .content .header-info {
 }
 
 @media (max-width: 576px) {
+  html {
+    font-size: 8px;
+    font-family: "Montserrat" sans-serif;
+  }
+
+  .logo img {
+    margin-left: 3rem;
+    width: 30rem;
+  }
+
+  .navbar {
+    z-index: 20;
+  }
+
+  .navbar.scrolled {
+    background-color: transparent;
+  }
+
+  /* .burger-menu {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .menu {
+    display: none;
+  } */
+
+  /* header */
+
+  header .content {
+    margin: 0 5rem;
+  }
+
+  header .content h1 {
+    font-size: 3rem;
+  }
+
+  header .content .big-title {
+    font-size: 6rem;
+  }
+
+  header .content .header-info {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .btn-blue,
+  .btn-white {
+    width: 100%;
+    margin: 0.5rem;
+    text-align: left;
+    font-size: x-large;
+    font-weight: 900;
+  }
+
+  .bg-gray {
+    height: 150%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container div {
+    width: 45rem;
+    margin: 2rem;
+  }
+
+  .container div p {
+    font-size: 3rem;
+  }
+
+  .classes-header h2 {
+    margin: 1rem 23rem;
+  }
+
+  .classes-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .underline-orange {
+    margin: 0 23rem 1rem;
+  }
+
+  .classes-header p {
+    text-align: center;
+    margin: 1rem 10rem;
+  }
+
+  .button-container {
+    margin: 1rem 15rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  .tab-button {
+    margin: 2rem 10rem;
+  }
+
+  .class-container {
+    flex-direction: column;
+  }
+
+  .bmi-container {
+    flex-direction: column;
+    margin: 0;
+    width: 70rem;
+  }
+
+  .bmi-inputs {
+    flex-direction: column;
+  }
+
+  .bmi-scale img {
+    width: 100%;
+  }
+
+  .scale-section {
+    width: 100%;
+  }
+  #trainer .bg-blue {
+    height: 1100px !important;
+  }
+
+  .trainer-boxes {
+    flex-direction: column !important;
+    margin: 0;
+  }
+
+  #trainer .classes-header h2 {
+    margin: 3rem 10rem !important;
+  }
+
+  .polygon-frame {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .img-2 {
+    margin-top: 50%;
+    margin-left: 0 !important;
+  }
+
+  .img-3 {
+    margin-top: 100%;
+    margin-left: 0 !important;
+  }
+
+  .image-1 {
+    margin: 1rem 1rem 0 0 !important;
+  }
+
+  .image-2 {
+    margin: -20rem -10rem 0 !important;
+  }
+
+  .image-3 {
+    margin: -22rem -10rem 0 !important;
+  }
+
+  #purchase .classes-header h2 {
+    margin: 1rem 10.5rem !important;
+  }
+
+  .container-purchase {
+    flex-direction: column;
+  }
+
+  #review .bg-blue {
+    height: 700px !important;
+  }
+
+  #review .classes-header h2 {
+    margin: 3rem 12rem !important;
+  }
+
+  .review-container {
+    flex-direction: column;
+    margin: 0 10rem;
+  }
+
+  .review {
+    width: 100%;
+  }
+
+  #contact .classes-header h2 {
+    margin: 3rem 15rem !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .site-info {
+    margin: 1rem 10rem;
+  }
+
+  .information {
+    flex-direction: column;
+    margin: 10rem;
+  }
 }

@@ -90,11 +90,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Üçgenin pozisyonunu güncelle
     triangle.style.left = `${position}px`;
   }
-
-  const burgerMenu = document.querySelector(".burger-menu");
-  const menu = document.querySelector(".menu");
-
-  burgerMenu.addEventListener("click", function () {
-    menu.classList.toggle("active");
-  });
 });
