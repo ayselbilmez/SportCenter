@@ -70,9 +70,12 @@ a {
 .burger-menu {
   display: none;
   cursor: pointer;
-  font-size: 2.5rem;
+  z-index: 1000;
+}
+
+.burger-menu span {
+  font-size: 3rem;
   color: var(--white-t);
-  margin-right: 2rem;
 }
 
 .menu {
@@ -758,14 +761,15 @@ header .content .header-info {
     background-color: transparent;
   }
 
-  /* .burger-menu {
-    display: block;
-    margin-left: 1rem;
+  .menu.active {
+    display: flex;
+    flex-direction: column;
   }
 
-  .menu {
-    display: none;
-  } */
+  .burger-menu {
+    display: block;
+    margin-left: 100px;
+  }
 
   /* header */
 

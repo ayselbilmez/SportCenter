@@ -91,3 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
     triangle.style.left = `${position}px`;
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // ...existing code...
+
+  // Burger menu functionality
+  const burgerMenu = document.querySelector(".burger-menu");
+  const menu = document.querySelector(".menu");
+
+  burgerMenu.addEventListener("click", function () {
+    menu.classList.toggle("active");
+
+    // Change burger icon
+    const icon = burgerMenu.querySelector("span");
+    if (menu.classList.contains("active")) {
+      icon.textContent = "close";
+    } else {
+      icon.textContent = "menu";
+    }
+  });
+
+  // Close menu when clicking on links
+  const menuLinks = document.querySelectorAll(".menu a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      burgerMenu.querySelector("span").textContent = "menu";
+    });
+  });
+});
